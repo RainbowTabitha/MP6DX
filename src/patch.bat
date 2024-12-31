@@ -32,7 +32,7 @@ for %%F in ("%~dp0*.rvz") do (
 )
 
 if not defined iso_files (
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo No ISO or RVZ files found in the same directory as the script.
     echo Place the Mario Party 6 (USA^) ISO or RVZ in the script's directory and run it again.
@@ -43,7 +43,7 @@ if not defined iso_files (
     exit /b 0
 )
 
-cls
+::cls
 mkdir tmp > NUL
 for %%F in ("%~dp0*.rvz") do (
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -51,25 +51,25 @@ for %%F in ("%~dp0*.rvz") do (
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     "tools/dolphintool" convert -i "%%~F" -f "iso" -o "tmp/tmp.iso"
 
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Extracting Gamespace!  This may take awhile depending on computer speed...
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     "tools/pyisotools" "tmp/tmp.iso" E "--dest=tmp/"
 
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Patching in Gecko Codes!
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-    "tools/GeckoLoader" --hooktype=GX --optimize "tmp/root/sys/main.dol" "store/codes/code.txt" --dest "tmp/root/sys/main.dol"
+    "tools/GeckoLoader" --hooktype=GX --optimize "tmp/root/sys/main.dol" "store/codes.txt" --dest "tmp/root/sys/main.dol"
 
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Copying mod data!
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     xcopy "store" "tmp\root\" /s /y /e
 
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Rebuilding! This may take awhile depending on computer speed...
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -78,25 +78,25 @@ for %%F in ("%~dp0*.rvz") do (
 )
 
 for %%F in ("%~dp0*.iso") do (
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Extracting Gamespace!  This may take awhile depending on computer speed...
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     "tools/pyisotools" "%%~F" E "--dest=tmp/"
 
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Patching in Gecko Codes!
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-    "tools/GeckoLoader" --hooktype=GX "tmp/root/sys/main.dol" "store/codes/code.txt" --dest "tmp/root/sys/main.dol"
+    "tools/GeckoLoader" --hooktype=GX "tmp/root/sys/main.dol" "store/codes.txt" --dest "tmp/root/sys/main.dol"
 
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Copying mod data!
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     xcopy "store" "tmp\root\" /s /y /e
 
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Rebuilding! This may take awhile depending on computer speed...
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -106,19 +106,19 @@ for %%F in ("%~dp0*.iso") do (
 
 :end
 if "%PATCHER%"=="RVZ" (
-    cls
+    ::cls
     "tools/dolphintool" convert -i "tmp/game.iso" -o "Mario Party 6 (USA) [DX] (%VERSION%).rvz" -f "rvz" -b "131072" -c "zstd" -l "5"
     del "tmp\game.iso"
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Success! Your game is located in "Mario Party 6 (USA) [DX] (%VERSION%).rvz" 
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 )
 
 if "%PATCHER%"=="ISO" (
-    cls
+    ::cls
     move "tmp\game.iso" "Mario Party 6 (USA) [DX] (%VERSION%).iso"
-    cls
+    ::cls
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     echo Success! Your game is located in "Mario Party 6 (USA) [DX] (%VERSION%).iso" 
     echo = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
