@@ -11,8 +11,9 @@ mkdir dist\store
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 5 - Poison Shroom Fixer.asm" && python "compiler/gecko.py" a.out 8019F538 tmp/5.txt1
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 6 - Debug Custom Orb Enabler.asm" && python "compiler/gecko.py" a.out 80249B14 tmp/6.txt1 -ow 
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 7 - Misc1.asm" && python "compiler/gecko.py" a.out 80249C7C tmp/7.txt1 -ow 
-"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 8 - Misc2.asm" && python "compiler/gecko.py" a.out 8024ABB0 tmp/8.txt1 -ow 
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 8 - Pink Boo Orb Color.asm" && python "compiler/gecko.py" a.out 8024ABB8 tmp/8.txt1 -ow 
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 9 - Misc3.asm" && python "compiler/gecko.py" a.out 8024AEB0 tmp/9.txt1 -ow 
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 10 - Random Bonus Stars.asm" && python "compiler/gecko.py" a.out 805031DC tmp/10.txt1
 
 del a.out
 
