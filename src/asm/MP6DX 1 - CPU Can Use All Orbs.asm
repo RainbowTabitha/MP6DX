@@ -4,7 +4,7 @@
 cmpwi r20, 0x20
 blt end
 
-#Check current time, goto end if PinkBoo and not Nighttime
+# Check current time, goto end if PinkBoo and not Nighttime
 lis r3, 0x8026
 ori r3, r3, 0x5B80
 lbz r3, 0 (r3)
@@ -16,7 +16,7 @@ beq boo_test
 #Let the CPU use the orb if it gets there.
 b enable_orb
 
-#Boo test. Since the Boo Orb does nothing at daytime, check if it's nighttime first. If it is, let the CPUs use the Boo orb. If it isn't, don't let them use it.
+# Boo test. Since the Boo Orb does nothing at daytime, check if it's nighttime first. If it is, let the CPUs use the Boo orb. If it isn't, don't let them use it.
 boo_test:
 cmpwi r3, 0x40
 beq enable_orb
