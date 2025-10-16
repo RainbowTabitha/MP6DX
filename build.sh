@@ -6,18 +6,23 @@ mkdir -p dist
 mkdir -p dist/store
 
 # Compile and process assembly files
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 1 - CPU Can Use All Orbs.asm" && python "compiler/gecko.py" a.out 801C986C tmp/1.txt1
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 2 - Duel Orb Fixer.asm" && python "compiler/gecko.py" a.out 801B9C60 tmp/2.txt1
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 3 - Pink Boo Orb Fixer.asm" && python "compiler/gecko.py" a.out 801B1C60 tmp/3.txt1
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 4 - Custom Orbs.asm" && python "compiler/gecko.py" a.out 801D644C tmp/4.txt1
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 5 - Poison Shroom Fixer.asm" && python "compiler/gecko.py" a.out 8019F538 tmp/5.txt1
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 6 - Debug Custom Orb Enabler.asm" && python "compiler/gecko.py" a.out 80249B14 tmp/6.txt1 -ow 
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 7 - Misc1.asm" && python "compiler/gecko.py" a.out 80249C7C tmp/7.txt1 -ow 
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 8 - Pink Boo Orb Color.asm" && python "compiler/gecko.py" a.out 8024ABB8 tmp/8.txt1 -ow 
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 9 - Misc3.asm" && python "compiler/gecko.py" a.out 8024AEB0 tmp/9.txt1 -ow 
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 1 - CPU Can Use All Orbs.asm" && python3 "compiler/gecko.py" a.out 801C986C tmp/1.txt1
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 2 - Duel Orb Fixer.asm" && python3 "compiler/gecko.py" a.out 801B9C60 tmp/2.txt1
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 3 - Pink Boo Orb Fixer.asm" && python3 "compiler/gecko.py" a.out 801B1C60 tmp/3.txt1
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 4 - Custom Orbs.asm" && python3 "compiler/gecko.py" a.out 801D644C tmp/4.txt1
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 5 - Poison Shroom Fixer.asm" && python3 "compiler/gecko.py" a.out 8019F538 tmp/5.txt1
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 6 - Duel Orb Pointer.asm" && python3 "compiler/gecko.py" a.out 80249B14 tmp/6.txt1 -ow
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 7 - Chance Orb Pointer.asm" && python3 "compiler/gecko.py" a.out 80249B3C tmp/6.txt1 -ow
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 8 - Bowser Orb Pointer.asm" && python3 "compiler/gecko.py" a.out 80249B64 tmp/6.txt1 -ow
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 9 - DK Orb Pointer.asm" && python3 "compiler/gecko.py" a.out 80249B8C tmp/6.txt1 -ow
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 10 - Red Boo Orb Pointer.asm" && python3 "compiler/gecko.py" a.out 80249BDC tmp/6.txt1 -ow
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 11 - Soluna Orb Pointer.asm" && python3 "compiler/gecko.py" a.out 80249C7C tmp/6.txt1 -ow
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 12 - Chomp Call Orb Pointer.asm" && python3 "compiler/gecko.py" a.out 80249CA4 tmp/6.txt1 -ow
+
 
 # Copy the text file
-cp "src/asm/MP6DX 10 - Orb Tables.txt" tmp/10.txt1
+cp "src/asm/MP6DX 13 - Star Blocking.txt" tmp/13.txt1
+cp "src/asm/MP6DX 14 - Orb Tables.txt" tmp/14.txt1
 
 # Remove the temporary object file
 rm -f a.out
