@@ -1,3 +1,4 @@
 #To be overwritten at 0x80249C7C
 
+.word 0x000C
 .word 0x005A
