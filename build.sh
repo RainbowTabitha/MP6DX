@@ -24,9 +24,9 @@ wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "sr
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 16 - Bowser Orb Rewrite.asm" && python "compiler/gecko.py" a.out 801BE730 tmp/15.txt1
 
 # Copy the text file
-cp "src/asm/MP6DX 17 - Star Blocking.txt" tmp/17.txt1
+cp "src/asm/MP6DX 17 - Debug Orb Enablers.txt" tmp/17.txt1
 cp "src/asm/MP6DX 18 - Orb Tables.txt" tmp/18.txt1
-cp "src/asm/MP6DX 19 - Debug Orb Enablers.txt" tmp/19.txt1
+cp "src/asm/MP6DX 19 - Star Blocking.txt" tmp/19.txt1
 
 # Remove the temporary object file
 rm -f a.out

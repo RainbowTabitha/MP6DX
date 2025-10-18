@@ -20,9 +20,9 @@ mkdir dist\store
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 15 - Pink Boo Orb Shell.asm" && python "compiler/gecko.py" a.out 80249BDC tmp/13.txt1 -ow
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 16 - Bowser Orb Rewrite.asm" && python "compiler/gecko.py" a.out 801BE730 tmp/15.txt1
 
-copy "src\asm\MP6DX 15 - Star Blocking.txt" tmp\15.txt1
-copy "src\asm\MP6DX 16 - Orb Tables.txt" tmp\16.txt1
 copy "src\asm\MP6DX 17 - Debug Orb Enablers.txt" tmp\17.txt1
+copy "src\asm\MP6DX 18 - Orb Tables.txt" tmp\18.txt1
+copy "src\asm\MP6DX 19 - Star Blocking.txt" tmp\19.txt1
 
 del a.out
 
