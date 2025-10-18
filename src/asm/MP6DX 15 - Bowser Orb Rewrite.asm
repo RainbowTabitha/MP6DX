@@ -7,22 +7,22 @@ lis r19, 0x802C
 ori r19, r19, 0x0257
 lbz r19, 0(r19)
 
-cmpwi r18, 0x7B
+cmpwi r19, 0x7B
 beq treetop
 
-cmpwi r18, 0x7C
+cmpwi r19, 0x7C
 beq egadd
 
-cmpwi r18, 0x7C
+cmpwi r19, 0x7D
 beq faire
 
-cmpwi r18, 0x7C
+cmpwi r19, 0x7E
 beq snowflake
 
-cmpwi r18, 0x7C
+cmpwi r19, 0x7F
 beq bay
 
-cmpwi r18, 0x7C
+cmpwi r19, 0x80
 beq castle
 
 b og
