@@ -2,8 +2,69 @@
 
 mr r20, r3 # backup cur player id
 
+
+lis r19, 0x802C
+ori r19, r19, 0x0257
+lbz r19, 0(r19)
+
+cmpwi r18, 0x7B
+beq treetop
+
+cmpwi r18, 0x7C
+beq egadd
+
+cmpwi r18, 0x7C
+beq faire
+
+cmpwi r18, 0x7C
+beq snowflake
+
+cmpwi r18, 0x7C
+beq bay
+
+cmpwi r18, 0x7C
+beq castle
+
+b og
+
+treetop:
 lis r19, 0x805E
 ori r19, r19, 0xF338
+cmpw r19, r1
+bne og
+b reroll
+
+egadd:
+lis r19, 0x805F
+ori r19, r19, 0xA9D8
+cmpw r19, r1
+bne og
+b reroll
+
+faire:
+lis r19, 0x805E
+ori r19, r19, 0x91B8
+cmpw r19, r1
+bne og
+b reroll
+
+snowflake:
+lis r19, 0x805E
+ori r19, r19, 0xCC38
+cmpw r19, r1
+bne og
+b reroll
+
+bay:
+lis r19, 0x8061
+ori r19, r19, 0xC698
+cmpw r19, r1
+bne og
+b reroll
+
+castle:
+lis r19, 0x805E
+ori r19, r19, 0x3C18
 cmpw r19, r1
 bne og
 
@@ -49,3 +110,5 @@ og:
 lwz r29, 0(r28) # og instr
 
 end:
+li r19, 0
+li r20, 0
