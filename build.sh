@@ -20,13 +20,13 @@ wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "sr
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 12 - Chomp Call Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249CA4 tmp/12.txt1 -ow
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 13 - Soluna Orb Shell.asm" && python "compiler/gecko.py" a.out 8024ABBC tmp/13.txt1 -ow
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 14 - DK and Pink Boo Orb Shell.asm" && python "compiler/gecko.py" a.out 8024ABB8 tmp/14.txt1 -ow
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 15 - Bowser Orb Rewrite.asm" && python "compiler/gecko.py" a.out 801BE730 tmp/16.txt1
+wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/MP6DX 15 - Bowser Orb Rewrite.asm" && python "compiler/gecko.py" a.out 801BE730 tmp/15.txt1
 
 
 # Copy the text file
 cp "src/asm/MP6DX 16 - Debug Orb Enablers.txt" tmp/16.txt1
-cp "src/asm/MP6DX 17 - Orb Tables.txt" tmp/17.txt1
-cp "src/asm/MP6DX 18 - Star Blocking.txt" tmp/18.txt1
+cp "src/asm/MP6DX 17 - Star Blocking.txt" tmp/17.txt1
+cp "src/asm/MP6DX 18 - Orb Tables.txt" tmp/18.txt1
 
 # Remove the temporary object file
 rm -f a.out
