@@ -1,33 +1,38 @@
 #To be inserted at 8019F538
 
-lis r14, 0x8026
-ori r14, r14, 0x5B7A
-lbz r15, 0(r14)
-lis r14, 0x8028
-ori r14, r14, 0x9871
-mulli r15, r15, 0x8
-add r14, r14, r15
-lbz r16, 0(r14)
-li r14, 0x0
-cmpwi r16, 0x88
-beq- loc_0x54
-addi r14, r14, 0x1
-cmpwi r16, 0x82
-beq- jump
-addi r14, r14, 0x1
-cmpwi r16, 0x84
-beq- jump
-addi r14, r14, 0x1
-cmpwi r16, 0x81
-beq- jump
+mr r20, r3 # backup cur player id
+
+lis r29, 0x8003
+ori r29, r29, 0xFCD4
+mtctr r29
+li r3, 3
+bctrl # run frandmod
+
+cmpw r3, r20 # if player id matches frandmod
+beq reroll
+
+cmpwi r3, 1 # if frandmod = 0
+beq p1Target
+
+cmpwi r3, 2 # if frandmod = 1
+beq p2Target
+
+cmpwi r3, 3 # if frandmod = 2
+beq p3Target
+
+p4Target:
+li r3, 3
 b end
 
-jump:
-stw r14, 0(r31)
+p1Target:
+li r3, 0
+b end
+
+p2Target:
+li r3, 1
+b end
+
+p3Target:
+li r3, 2
 
 end:
-li r5, 0x0
-li r14, 0x0
-li r15, 0x0
-li r16, 0x0
-
