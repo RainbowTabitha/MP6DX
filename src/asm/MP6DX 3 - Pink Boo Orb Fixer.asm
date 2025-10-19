@@ -1,4 +1,4 @@
-#To be inserted at 801B1C60
+# Insert at 801B1C60
 
 cmpwi r28, 0x0
 bne- end

@@ -1,4 +1,4 @@
-#To be overwritten at 0x8024ABBC
+# Insert at 0x8024ABBC
 
 .word 0x000C
 .word 0x0018

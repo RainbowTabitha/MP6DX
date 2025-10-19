@@ -1,4 +1,4 @@
-#To be injected at 0x801BE538
+# Insert at 801BE538
 
 lis r19, 0x817F
 ori r19, r19, 0xFFFF

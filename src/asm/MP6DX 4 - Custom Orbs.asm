@@ -1,4 +1,4 @@
-#To be inserted at 801d644c
+# Insert at 801d644c
 
 cmpwi r4, 0x578 #Compare r4 with (Capsule used ID multiplied by 0x1C) 
 beq dayNightOrb

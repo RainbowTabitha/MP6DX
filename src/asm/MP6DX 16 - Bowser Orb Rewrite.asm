@@ -1,4 +1,4 @@
-#To be injected at 0x801BE730
+# Insert at 801BE730
 
 mr r20, r3 # backup cur player id
 
