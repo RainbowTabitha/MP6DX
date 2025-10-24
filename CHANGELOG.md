@@ -1,0 +1,1 @@
+fix bowser space triggering orb byte checker
