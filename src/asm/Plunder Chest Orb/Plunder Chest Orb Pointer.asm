@@ -1,0 +1,4 @@
+# Insert at 0x80249BB4
+
+.word 0x000C
+.word 0x005C

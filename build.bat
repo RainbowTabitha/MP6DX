@@ -16,11 +16,17 @@ mkdir dist\store
 
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/DK and Pink Boo Orb/DK and Pink Boo Orb Shell.asm" && python "compiler/gecko.py" a.out 8024ABB8 tmp/dk_and_pink_boo_orb_shell.txt1 -ow
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/DK and Pink Boo Orb/DK Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249B8C tmp/dk_orb_pointer.txt1 -ow
-"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/DK and Pink Boo Orb/Pink Boo Orb Fixer.asm" && python "compiler/gecko.py" a.out 801B1C60 tmp/pink_boo_orb_fixer.txt1
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/DK and Pink Boo Orb/Pink Boo Day 1.asm" && python "compiler/gecko.py" a.out 801B1BB4 tmp/pink_boo_orb_day_1.txt1
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/DK and Pink Boo Orb/Pink Boo Day 2.asm" && python "compiler/gecko.py" a.out 801B1EF8 tmp/pink_boo_orb_day_2.txt1
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/DK and Pink Boo Orb/Pink Boo Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249BDC tmp/pink_boo_orb_pointer.txt1 -ow
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/DK and Pink Boo Orb/Pink Boo Orb Pos Fixer.asm" && python "compiler/gecko.py" a.out 801B1C60 tmp/pink_boo_orb_pos_fixer.txt1
 
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Duel Orb/Duel Orb Fixer.asm" && python "compiler/gecko.py" a.out 801B9C60 tmp/duel_orb_fixer.txt1
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Duel Orb/Duel Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249B14 tmp/duel_orb_pointer.txt1 -ow
+
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Plunder Chest Orb/Plunder Chest Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249BB4 tmp/plunder_chest_orb_pointer.txt1 -ow
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Plunder Chest Orb/Plunder Chest Orb Rewrite.asm" && python "compiler/gecko.py" a.out 801A769C tmp/plunder_chest_orb_rewrite.txt1
+"compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Plunder Chest Orb/Plunder Chest Orb Type.asm" && python "compiler/gecko.py" a.out 80249D12 tmp/plunder_chest_orb_type.txt1 -ow
 
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Soluna Orb/Soluna Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249C7C tmp/soluna_orb_pointer.txt1 -ow
 "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Soluna Orb/Soluna Orb Shell.asm" && python "compiler/gecko.py" a.out 8024ABBC tmp/soluna_orb_shell.txt1 -ow
@@ -30,8 +36,6 @@ mkdir dist\store
 
 copy "src\asm\Debug Orb Enablers.txt" tmp\debug_orb_enablers.txt1
 copy "src\asm\Orb Tables.txt" tmp\orb_tables.txt1
-
-copy "src\asm\Star Randomizer.txt" tmp\star_randomizer.txt1
 del a.out
 
 cd tmp

@@ -1,15 +1,16 @@
-# Insert at 801BE730
+# Insert at 801A769C
 
-lwz r29, 0(r28) # og instr
+lwz r26, 0(r30)
+
 lis r19, 0x8026
 
-cmpwi r29, 0
+cmpwi r26, 0
 beq p1Ori
 
-cmpwi r29, 1
+cmpwi r26, 1
 beq p2Ori
 
-cmpwi r29, 2
+cmpwi r26, 2
 beq p3Ori
 
 p4Ori:
@@ -40,7 +41,7 @@ mtctr r29
 li r3, 4
 bctrl # run frandmod
 
-cmpw r3, r29 # if player id matches frandmod
+cmpw r3, r26 # if player id matches frandmod
 beq reroll
 
 cmpwi r3, 0 # if frandmod = 0
@@ -56,22 +57,24 @@ cmpwi r3, 3 # if frandmod = 3
 beq p4Target
 
 p1Target:
-li r29, 0
-b end
+li r27, 0
+b og
 
 p2Target:
-li r29, 1
-b end
+li r27, 1
+b og
 
 p3Target:
-li r29, 2
-b end
+li r27, 2
+b og
 
 p4Target:
-li r29, 3
-b end
+li r27, 3
 
 og:
+stw r27, 0(r30)
+
 end:
+lis	r3, 0x000F
 li r20, 0
 li r19, 0
