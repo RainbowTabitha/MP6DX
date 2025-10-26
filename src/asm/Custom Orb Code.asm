@@ -50,4 +50,4 @@ mtctr r3
 bctr # Go to end of Orb Function
 
 notCustomOrb:
-lwz r3, 0 (r3) # Execute original instruction
+lwz r3, 0(r3) # Execute original instruction
