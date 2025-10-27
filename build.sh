@@ -28,7 +28,6 @@ wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "sr
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Pink Boo Orb/Pink Boo Orb Pos Fixer.asm" && python "compiler/gecko.py" a.out 801B1C60 tmp/pink_boo_orb_pos_fixer.txt1
 
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Plunder Chest Orb/Plunder Chest Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249BB4 tmp/plunder_chest_orb_pointer.txt1 -ow
-wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Plunder Chest Orb/Plunder Chest Orb Rewrite.asm" && python "compiler/gecko.py" a.out 801A769C tmp/plunder_chest_orb_rewrite.txt1
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Plunder Chest Orb/Plunder Chest Orb Type.asm" && python "compiler/gecko.py" a.out 80249D12 tmp/plunder_chest_orb_type.txt1 -ow
 
 wine "compiler/codewrite/powerpc-gekko-as.exe" -a32 -mbig -mregnames -mgekko "src/asm/Soluna Orb/Soluna Orb Pointer.asm" && python "compiler/gecko.py" a.out 80249C7C tmp/soluna_orb_pointer.txt1 -ow

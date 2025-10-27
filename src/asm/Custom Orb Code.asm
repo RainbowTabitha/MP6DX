@@ -9,9 +9,6 @@ beq chompyOrb
 cmpwi r4, 0x5B0 #Compare r4 with (Capsule used ID multiplied by 0x1C)
 beq wackyWatchOrb
 
-cmpwi r4, 0x4EC #Compare r4 with (Capsule used ID multiplied by 0x1C)
-beq plunderChestOrb
-
 b notCustomOrb
 
 dayNightOrb:
@@ -36,12 +33,6 @@ lbz r19, 1(r3) # load in MaxTurn to r19
 subi r19, r19, 5 # right before last 5
 stb r19, 0(r3)
 b finishCustomCapsule
-
-plunderChestOrb:
-lis r3, 0x801A # MBCapsuleKokamekkuExec@h
-ori r3, r3, 0x75F0 # MBCapsuleKokamekkuExec@l
-mtctr r3
-bctr # run fucntion
 
 finishCustomCapsule:
 lis r3, 0x801D
