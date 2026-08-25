@@ -9,7 +9,7 @@ beq chompyOrb
 cmpwi r4, 0x5B0 #Compare r4 with (Capsule used ID multiplied by 0x1C)
 beq wackyWatchOrb
 
-cmpwi r4, 0x5CC #Compare r4 with (Capsule used ID multiplied by 0x1C)
+cmpwi r4, 0x5F4 #Compare r4 with (Capsule used ID multiplied by 0x1C)
 beq battleOrb
 
 b notCustomOrb
